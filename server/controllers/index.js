@@ -1,6 +1,5 @@
+const playerController = require('./players');
 
-	const productController = require('./products');
-
-	module.exports = {
-  	productController,
-	}
+module.exports = {
+  playerController,
+}

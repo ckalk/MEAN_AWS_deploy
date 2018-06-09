@@ -10,7 +10,8 @@ const app = express();
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json() );
 
-app.use(express.static(path.join(__dirname, 'dist/productProjectMgmt')));
+// subdir in /dist will be the <application-name>
+app.use(express.static(path.join(__dirname, 'dist/teamManager')));
 
 //require(path.resolve('server', 'config', 'database'));
 require('./server/config/database');
@@ -18,6 +19,7 @@ require('./server/config/database');
 // require(path.resolve('server', 'config', 'routes'))(app);
 //load and use routes file
 app.use('/api', require('./server/config/routes'));
+
 // this line is to reconcile conflicts between server-side routing (above) and client-side routing of Angular
 app.use(require('./server/config/routes/catch-all.route'));
 

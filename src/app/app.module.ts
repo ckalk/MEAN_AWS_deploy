@@ -1,42 +1,40 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { DataService } from './data.service';
+import { TeamdataService } from './teamdata.service';
+
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ListComponent } from './list/list.component';
-import { EditComponent } from './edit/edit.component';
-import { CreateComponent } from './create/create.component';
-import { ItemComponent } from './list/item/item.component';
-
+import { PlayersComponent } from './players/players.component';
+import { StatusComponent } from './status/status.component';
+import { ListComponent } from './players/list/list.component';
+import { AddplayerComponent } from './players/addplayer/addplayer.component';
+import { GameComponent } from './status/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    PlayersComponent,
+    StatusComponent,
     ListComponent,
-    EditComponent,
-    CreateComponent,
-    ItemComponent
+    AddplayerComponent,
+    GameComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    // import HttpClientModule after BrowserModule.
     HttpClientModule,
     AppRoutingModule,
   ],
-  // add dataService to providers once it is set up
   providers: [
-    DataService,
+    TeamdataService,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
 
