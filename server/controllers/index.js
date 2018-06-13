@@ -1,5 +1,5 @@
-const playerController = require('./players');
+const productController = require('./products');
 
 module.exports = {
-  playerController,
+  productController,
 }

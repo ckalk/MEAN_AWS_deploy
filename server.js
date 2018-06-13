@@ -11,7 +11,7 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json() );
 
 // subdir in /dist will be the <application-name>
-app.use(express.static(path.join(__dirname, 'dist/teamManager')));
+app.use(express.static(path.join(__dirname, 'dist/commerceManager')));
 
 //require(path.resolve('server', 'config', 'database'));
 require('./server/config/database');

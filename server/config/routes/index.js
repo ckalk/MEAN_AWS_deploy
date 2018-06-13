@@ -1,9 +1,8 @@
-
-const playerRouter = require('./player.routes');
+const productRouter = require('./product.routes');
 
 const router = require('express').Router();
 
 module.exports = router
 
-  .use('/players', playerRouter);
+  .use('/products', productRouter);
 

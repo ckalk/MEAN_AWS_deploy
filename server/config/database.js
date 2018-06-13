@@ -10,8 +10,8 @@ const modelsPath = path.resolve('server', 'models');
 console.log('DATABASE in server->config->database.js');
 
 // this connects to whatever the database is named here (or what you want it to be named if it has not yet been created). The db name is not referenced in the code anywhere else. It is named soccerplayers here.
-mongoose.connect('mongodb://localhost/soccerplayers');
-mongoose.connection.on('connected', () => console.log('DATABASE Connected to MongoDB soccerplayers'));
+mongoose.connect('mongodb://localhost/commerce');
+mongoose.connection.on('connected', () => console.log('DATABASE Connected to MongoDB commerce'));
 
 // if running Mongoose version < 5.0, you want to chg to use global Promise
 mongoose.Promise = global.Promise;
